@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Blackjack.StartPage" BackgroundColor="Black">
+    
+    
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="130" BackgroundColor="Green">
+
+        <Label Text="Blackjack" FontAttributes="Bold" TextColor="Black" Padding="3,0,0,50" VerticalOptions="Start" FontSize="30"/>
+
+        <Frame CornerRadius="10"  OutlineColor="Gray" BorderColor="DarkGray" Padding="0" HasShadow="False"
+             IsClippedToBounds="True" Margin="5" BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="15,10" BackgroundColor="White" Margin="5">
+                <Label Text="Ile wpłacić?" TextColor="Black" Padding="0,0,0,0" FontSize="Default"/>
+                <Picker x:Name="CashPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:Int16}">
+                            <x:Int16>100</x:Int16>
+                            <x:Int16>250</x:Int16>
+                            <x:Int16>500</x:Int16>
+                            <x:Int16>1000</x:Int16>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Dołącz" Clicked="OnContinueButtonClicked" BackgroundColor="Black" TextColor="White" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
